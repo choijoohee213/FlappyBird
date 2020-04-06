@@ -48,8 +48,8 @@ public class GameManager : MonoBehaviour
         }
         else
         {
-            randomIndexA = Random.RandomRange(0, 3);
-            randomIndexB = Random.RandomRange(0, 2);
+            randomIndexA = Random.Range(0, 3);
+            randomIndexB = Random.Range(0, 2);
         }
         players[randomIndexA].SetActive(true);
         backgroundSprites[randomIndexB].SetActive(true);
@@ -90,7 +90,6 @@ public class GameManager : MonoBehaviour
         GameObject pillarUp = om.MakeObj("pillarUp");  //윗 기둥
         GameObject pillarDown = om.MakeObj("pillarDown");  //아랫 기둥
         GameObject scoreZone = om.MakeObj("scoreZone");  //점수 획득 존
-        Debug.Log(randomIndex);
 
         //기둥 스폰 위치
         pillarUp.transform.position = new Vector3(3.5f, randomIndex);
